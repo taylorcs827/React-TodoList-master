@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  color: #000000;
+}
+
+  body {
+    background: linear-gradient(to bottom left, #A0AECD, #4B0082); /* Gradient background */
+  }
+
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.todoListMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todoListMain .header form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.todoListMain .header input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #FFF;
+  width: 70%;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add margin to separate input and button */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.todoListMain .header button {
+  padding: 10px;
+  font-size: 14px;
+  background-color: #003399;
+  color: #FFF;
+  border: 2px solid #003399;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 70%;
+  text-align: center;
+  margin: 0; /* Remove margin */
+  }
+
+.todoListMain .header button:hover {
+  background-color: #0066FF;
+  border: 2px solid #0066FF;
+}
+
+/* Task item styling */
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: auto; /* Allow the task item to resize based on its content */
+  }
+
+
+
+.taskItem button.deleteBtn {
+  width: 20%;
+  background-color: #003399;
+  color: white;
+  border: none;
+  padding: 2px; /* Ensure some padding on both sides */
+  font-size: 10px; /* Smaller font size */
+  cursor: pointer;
+  margin-left: 10px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  }
+
+
+
+/* Media queries for larger screens */
+@media (min-width: 600px) {
+  .todoListMain .header form {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+
+  .todoListMain .header input {
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  .todoListMain .header button {
+    width: auto;
+    margin-left: 10px;
+  }
+}
